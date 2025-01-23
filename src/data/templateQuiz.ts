@@ -55,15 +55,15 @@ export const templateQuestions: QuestionData[] = [
     id: 2,
     question: "What does this represent?",
     correctAnswer: "Bravo",
-    description: "Transporting explosives fuel or inflammable material.",
-    fact: "",
+    description: "",
+    fact: "The navy meaning is 'Transporting explosives fuel or inflammable material'.",
     imageUrl: "/images/Bravo.png"
   },
   {
     id: 3,
     question: "What does this represent?",
     correctAnswer: "Charlie",
-    description: "",
+    description: "The navy meaning is 'Yes (affirmative)'.",
     fact: "",
     imageUrl: "/images/Charlie.png"
   },
@@ -72,7 +72,7 @@ export const templateQuestions: QuestionData[] = [
     question: "What does this represent?",
     correctAnswer: "Delta",
     description: "",
-    fact: "",
+    fact: "The navy meaning is 'Degaussing.'",
     imageUrl: "/images/Delta.png"
   },
   {
@@ -80,7 +80,7 @@ export const templateQuestions: QuestionData[] = [
     question: "What does this represent?",
     correctAnswer: "Echo",
     description: "",
-    fact: "",
+    fact: "The navy meaning is 'No RF danger'.",
     imageUrl: "/images/Echo.png"
   },
   {
@@ -88,7 +88,7 @@ export const templateQuestions: QuestionData[] = [
     question: "What does this represent?",
     correctAnswer: "Foxtrot",
     description: "",
-    fact: "",
+    fact: "The navy meaning is 'Flight operations'.",
     imageUrl: "/images/Foxtrot.png"
   },
   {
@@ -96,7 +96,7 @@ export const templateQuestions: QuestionData[] = [
     question: "What does this represent?",
     correctAnswer: "Golf",
     description: "",
-    fact: "",
+    fact: "The navy meaning is 'Guide Flag'.",
     imageUrl: "/images/Golf.png"
   },
   {
@@ -104,7 +104,7 @@ export const templateQuestions: QuestionData[] = [
     question: "What does this represent?",
     correctAnswer: "Hotel",
     description: "",
-    fact: "",
+    fact: "The navy meaning is 'Helicopter operations'.",
     imageUrl: "/images/Hotel.png"
   },
   {
@@ -112,7 +112,7 @@ export const templateQuestions: QuestionData[] = [
     question: "What does this represent?",
     correctAnswer: "India",
     description: "",
-    fact: "",
+    fact: "The navy meaning is 'Coming alongside'.",
     imageUrl: "/images/India.png"
   },
   {
@@ -120,7 +120,7 @@ export const templateQuestions: QuestionData[] = [
     question: "What does this represent?",
     correctAnswer: "Juliett",
     description: "",
-    fact: "",
+    fact: "The navy meaning is 'Spare no meaning'.",
     imageUrl: "/images/Juliett.png"
   },
   {
@@ -128,7 +128,7 @@ export const templateQuestions: QuestionData[] = [
     question: "What does this represent?",
     correctAnswer: "Kilo",
     description: "",
-    fact: "",
+    fact: "The navy meaning is 'Spare no meaning'.",
     imageUrl: "/images/Kilo.png"
   },
   {
@@ -136,7 +136,7 @@ export const templateQuestions: QuestionData[] = [
     question: "What does this represent?",
     correctAnswer: "Lima",
     description: "",
-    fact: "",
+    fact: "The navy meaning is 'Radhaz/Hero warning'.",
     imageUrl: "/images/Lima.png"
   },
   {
@@ -144,7 +144,7 @@ export const templateQuestions: QuestionData[] = [
     question: "What does this represent?",
     correctAnswer: "Mike",
     description: "",
-    fact: "",
+    fact: "The navy meaning is 'Medical Duty Ship'.",
     imageUrl: "/images/Mike.png"
   },
   {
@@ -152,7 +152,7 @@ export const templateQuestions: QuestionData[] = [
     question: "What does this represent?",
     correctAnswer: "November",
     description: "",
-    fact: "",
+    fact: "The navy meaning is 'Your movements not understood'.",
     imageUrl: "/images/November.png"
   },
   {
@@ -160,7 +160,7 @@ export const templateQuestions: QuestionData[] = [
     question: "What does this represent?",
     correctAnswer: "Oscar",
     description: "",
-    fact: "",
+    fact: "The navy meaning is 'Man Overboard'.",
     imageUrl: "/images/Oscar.png"
   },
   {
@@ -168,7 +168,7 @@ export const templateQuestions: QuestionData[] = [
     question: "What does this represent?",
     correctAnswer: "Papa",
     description: "",
-    fact: "",
+    fact: "The navy meaning is 'General Recall'.",
     imageUrl: "/images/Papa.png"
   },
   {
@@ -176,7 +176,7 @@ export const templateQuestions: QuestionData[] = [
     question: "What does this represent?",
     correctAnswer: "Quebec",
     description: "",
-    fact: "",
+    fact: "The navy meaning is 'Boat Recall; all boats return to ship'.",
     imageUrl: "/images/Quebec.png"
   },
   {
@@ -184,7 +184,7 @@ export const templateQuestions: QuestionData[] = [
     question: "What does this represent?",
     correctAnswer: "Romeo",
     description: "",
-    fact: "",
+    fact: "The navy meaning is 'Preparing to replenish (at sea) Ready Duty Ship (in port)'.",
     imageUrl: "/images/Romeo.png"
   },
   {
@@ -192,7 +192,7 @@ export const templateQuestions: QuestionData[] = [
     question: "What does this represent?",
     correctAnswer: "Sierra",
     description: "",
-    fact: "",
+    fact: "The navy meaning is 'Conducting Flag Hoist drill'.",
     imageUrl: "/images/Sierra.png"
   },
   {
@@ -200,7 +200,7 @@ export const templateQuestions: QuestionData[] = [
     question: "What does this represent?",
     correctAnswer: "Tango",
     description: "",
-    fact: "",
+    fact: "The navy meaning is 'Conducting Flag Hoist drill'.",
     imageUrl: "/images/Tango.png"
   },
   {
@@ -208,7 +208,7 @@ export const templateQuestions: QuestionData[] = [
     question: "What does this represent?",
     correctAnswer: "Uniform",
     description: "",
-    fact: "",
+    fact: "The navy meaning is 'Anchoring'.",
     imageUrl: "/images/Uniform.png"
   },
   {
@@ -216,7 +216,7 @@ export const templateQuestions: QuestionData[] = [
     question: "What does this represent?",
     correctAnswer: "Victor",
     description: "",
-    fact: "",
+    fact: "The navy meaning is 'Streaming/Recovering Towed acoustic devices'.",
     imageUrl: "/images/Victor.png"
   },
   {
@@ -224,7 +224,7 @@ export const templateQuestions: QuestionData[] = [
     question: "What does this represent?",
     correctAnswer: "Whiskey",
     description: "",
-    fact: "",
+    fact: "The navy meaning is 'Information addressee'.",
     imageUrl: "/images/Whiskey.png"
   },
   {
@@ -232,7 +232,7 @@ export const templateQuestions: QuestionData[] = [
     question: "What does this represent?",
     correctAnswer: "Xray",
     description: "",
-    fact: "",
+    fact: "The navy meaning is 'Exercise'.",
     imageUrl: "/images/Xray.png"
   },
   {
@@ -240,7 +240,7 @@ export const templateQuestions: QuestionData[] = [
     question: "What does this represent?",
     correctAnswer: "Yankee",
     description: "",
-    fact: "",
+    fact: "The navy meaning is 'Acknowledge'.",
     imageUrl: "/images/Yankee.png"
   },
   {
@@ -248,7 +248,7 @@ export const templateQuestions: QuestionData[] = [
     question: "What does this represent?",
     correctAnswer: "Zulu",
     description: "",
-    fact: "",
+    fact: "The navy meaning is 'Acknowledge'.",
     imageUrl: "/images/Zulu.png"
   }
 ];
