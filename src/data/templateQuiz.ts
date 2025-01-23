@@ -72,7 +72,7 @@ export const templateQuestions: QuestionData[] = [
     question: "What does this represent?",
     correctAnswer: "Delta",
     description: "",
-    fact: "The navy meaning is 'Degaussing.'",
+    fact: "The navy meaning is 'Degaussing'.",
     imageUrl: "/images/Delta.png"
   },
   {
