@@ -36,7 +36,7 @@ import type { QuestionData } from '../types';
 export const QUIZ_CONFIG = {
   title: "Navy Signal Flags and Pennants",
   description: "Test your knowledge of signal flags and pennants",
-  themeColor: 'purple' as const,  // Options: 'blue' | 'green' | 'sky' | 'red'
+  themeColor: 'purple' as const,  // Available colors: 'blue' | 'green' | 'sky' | 'red' | 'purple' | 'orange' | 'pink'
   quiz_name: "signal_flags", // Unique identifier for the quiz, used in database
   startScreenImage: "/images/quiz-start.jpg" // Optional: Image shown on start screen
 };
@@ -54,7 +54,7 @@ export const templateQuestions: QuestionData[] = [
   {
     id: 2,
     question: "What does this represent?",
-    correctAnswer: "",
+    correctAnswer: "Bravo",
     description: "Transporting explosives fuel or inflammable material.",
     fact: "",
     imageUrl: "/images/Bravo.png"
@@ -62,194 +62,194 @@ export const templateQuestions: QuestionData[] = [
   {
     id: 3,
     question: "What does this represent?",
-    correctAnswer: "",
+    correctAnswer: "Charlie",
     description: "",
     fact: "",
-    imageUrl: "/images/xxx.png"
+    imageUrl: "/images/Charlie.png"
   },
   {
     id: 4,
     question: "What does this represent?",
-    correctAnswer: "",
+    correctAnswer: "Delta",
     description: "",
     fact: "",
-    imageUrl: "/images/xxx.png"
+    imageUrl: "/images/Delta.png"
   },
   {
     id: 5,
     question: "What does this represent?",
-    correctAnswer: "",
+    correctAnswer: "Echo",
     description: "",
     fact: "",
-    imageUrl: "/images/xxx.png"
+    imageUrl: "/images/Echo.png"
   },
   {
     id: 6,
     question: "What does this represent?",
-    correctAnswer: "",
+    correctAnswer: "Foxtrot",
     description: "",
     fact: "",
-    imageUrl: "/images/xxx.png"
+    imageUrl: "/images/Foxtrot.png"
   },
   {
     id: 7,
     question: "What does this represent?",
-    correctAnswer: "",
+    correctAnswer: "Golf",
     description: "",
     fact: "",
-    imageUrl: "/images/xxx.png"
+    imageUrl: "/images/Golf.png"
   },
   {
     id: 8,
     question: "What does this represent?",
-    correctAnswer: "",
+    correctAnswer: "Hotel",
     description: "",
     fact: "",
-    imageUrl: "/images/xxx.png"
+    imageUrl: "/images/Hotel.png"
   },
   {
     id: 9,
     question: "What does this represent?",
-    correctAnswer: "",
+    correctAnswer: "India",
     description: "",
     fact: "",
-    imageUrl: "/images/xxx.png"
+    imageUrl: "/images/India.png"
   },
   {
     id: 10,
     question: "What does this represent?",
-    correctAnswer: "",
+    correctAnswer: "Juliett",
     description: "",
     fact: "",
-    imageUrl: "/images/xxx.png"
+    imageUrl: "/images/Juliett.png"
   },
   {
     id: 11,
     question: "What does this represent?",
-    correctAnswer: "",
+    correctAnswer: "Kilo",
     description: "",
     fact: "",
-    imageUrl: "/images/xxx.png"
+    imageUrl: "/images/Kilo.png"
   },
   {
     id: 12,
     question: "What does this represent?",
-    correctAnswer: "",
+    correctAnswer: "Lima",
     description: "",
     fact: "",
-    imageUrl: "/images/xxx.png"
+    imageUrl: "/images/Lima.png"
   },
   {
     id: 13,
     question: "What does this represent?",
-    correctAnswer: "",
+    correctAnswer: "Mike",
     description: "",
     fact: "",
-    imageUrl: "/images/xxx.png"
+    imageUrl: "/images/Mike.png"
   },
   {
     id: 14,
     question: "What does this represent?",
-    correctAnswer: "",
+    correctAnswer: "November",
     description: "",
     fact: "",
-    imageUrl: "/images/xxx.png"
+    imageUrl: "/images/November.png"
   },
   {
     id: 15,
     question: "What does this represent?",
-    correctAnswer: "",
+    correctAnswer: "Oscar",
     description: "",
     fact: "",
-    imageUrl: "/images/xxx.png"
+    imageUrl: "/images/Oscar.png"
   },
   {
     id: 16,
     question: "What does this represent?",
-    correctAnswer: "",
+    correctAnswer: "Papa",
     description: "",
     fact: "",
-    imageUrl: "/images/xxx.png"
+    imageUrl: "/images/Papa.png"
   },
   {
     id: 17,
     question: "What does this represent?",
-    correctAnswer: "",
+    correctAnswer: "Quebec",
     description: "",
     fact: "",
-    imageUrl: "/images/xxx.png"
+    imageUrl: "/images/Quebec.png"
   },
   {
     id: 18,
     question: "What does this represent?",
-    correctAnswer: "",
+    correctAnswer: "Romeo",
     description: "",
     fact: "",
-    imageUrl: "/images/xxx.png"
+    imageUrl: "/images/Romeo.png"
   },
   {
     id: 19,
     question: "What does this represent?",
-    correctAnswer: "",
+    correctAnswer: "Sierra",
     description: "",
     fact: "",
-    imageUrl: "/images/xxx.png"
+    imageUrl: "/images/Sierra.png"
   },
   {
     id: 20,
     question: "What does this represent?",
-    correctAnswer: "",
+    correctAnswer: "Tango",
     description: "",
     fact: "",
-    imageUrl: "/images/xxx.png"
+    imageUrl: "/images/Tango.png"
   },
   {
     id: 21,
     question: "What does this represent?",
-    correctAnswer: "",
+    correctAnswer: "Uniform",
     description: "",
     fact: "",
-    imageUrl: "/images/xxx.png"
+    imageUrl: "/images/Uniform.png"
   },
   {
     id: 22,
     question: "What does this represent?",
-    correctAnswer: "",
+    correctAnswer: "Victor",
     description: "",
     fact: "",
-    imageUrl: "/images/xxx.png"
+    imageUrl: "/images/Victor.png"
   },
   {
     id: 23,
     question: "What does this represent?",
-    correctAnswer: "",
+    correctAnswer: "Whiskey",
     description: "",
     fact: "",
-    imageUrl: "/images/xxx.png"
+    imageUrl: "/images/Whiskey.png"
   },
   {
     id: 24,
     question: "What does this represent?",
-    correctAnswer: "",
+    correctAnswer: "Xray",
     description: "",
     fact: "",
-    imageUrl: "/images/xxx.png"
+    imageUrl: "/images/Xray.png"
   },
   {
     id: 25,
     question: "What does this represent?",
-    correctAnswer: "",
+    correctAnswer: "Yankee",
     description: "",
     fact: "",
-    imageUrl: "/images/xxx.png"
+    imageUrl: "/images/Yankee.png"
   },
   {
     id: 26,
     question: "What does this represent?",
-    correctAnswer: "",
+    correctAnswer: "Zulu",
     description: "",
     fact: "",
-    imageUrl: "/images/xxx.png"
+    imageUrl: "/images/Zulu.png"
   }
 ];
 

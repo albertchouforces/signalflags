@@ -31,7 +31,7 @@ export interface QuizStats {
 export interface QuizConfig {
   title: string;
   description: string;
-  themeColor: 'blue' | 'green' | 'sky' | 'red';
+  themeColor: 'blue' | 'green' | 'sky' | 'red' | 'purple' | 'orange' | 'pink';
   quiz_name: string;
   startScreenImage?: string;
 }

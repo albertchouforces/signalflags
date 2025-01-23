@@ -82,17 +82,18 @@ export function FlashCard({
             <h3 className="text-xl font-semibold text-gray-800">{question.question}</h3>
             <span className="text-sm text-gray-500">Question {questionNumber} of {totalQuestions}</span>
           </div>
+          {/* Image Container with improved sizing */}
           <div className="flex flex-col items-center mb-4">
-            <div className="w-full max-w-2xl h-auto bg-gray-50 rounded-lg flex items-center justify-center mb-4">
+            <div className="w-full aspect-[16/9] relative rounded-lg overflow-hidden bg-transparent mb-4">
               {!imageLoaded && !imageError && (
-                <div className="w-full h-64 flex flex-col items-center justify-center bg-gray-100 rounded-lg border-2 border-dashed border-gray-300">
+                <div className="absolute inset-0 flex flex-col items-center justify-center bg-gray-50">
                   <div className="text-gray-400 text-center px-4">
                     <div className="text-sm font-medium mb-1">Loading Image</div>
                   </div>
                 </div>
               )}
               {imageError ? (
-                <div className="w-full h-64 flex flex-col items-center justify-center text-gray-400">
+                <div className="absolute inset-0 flex flex-col items-center justify-center bg-gray-50 text-gray-400">
                   <ImageOff size={32} />
                   <p className="text-sm mt-2">Image not available</p>
                 </div>
@@ -100,7 +101,7 @@ export function FlashCard({
                 <img
                   src={question.imageUrl}
                   alt="Question"
-                  className={`w-full max-w-2xl h-auto object-contain rounded-lg ${imageLoaded ? 'block' : 'hidden'}`}
+                  className={`w-full h-full object-contain ${imageLoaded ? 'block' : 'hidden'}`}
                   onLoad={() => setImageLoaded(true)}
                   onError={handleImageError}
                 />
