@@ -47,8 +47,8 @@ export const templateQuestions: QuestionData[] = [
     id: 1,
     question: "What does this represent?",
     correctAnswer: "Alfa",
-    description: "I have a diver down; keep well clear at slow speed.",
-    fact: "",
+    description: "",
+    fact: "The navy meaning is 'I have a diver down; keep well clear at slow speed'.",
     imageUrl: "/images/Alfa.png"  // Place image in public/images/
   },
   {
