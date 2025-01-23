@@ -248,8 +248,40 @@ export const templateQuestions: QuestionData[] = [
     question: "What does this represent?",
     correctAnswer: "Zulu",
     description: "",
-    fact: "The navy meaning is 'Acknowledge'.",
+    fact: "The navy meaning is 'Communications Guard'.",
     imageUrl: "/images/Zulu.png"
+  },
+  {
+    id: 27,
+    question: "What does this represent?",
+    correctAnswer: "Code Answer",
+    description: "",
+    fact: "The navy meaning is 'Message is understood'.",
+    imageUrl: "/images/Code Answer.png"
+  },
+  {
+    id: 28,
+    question: "What does this represent?",
+    correctAnswer: "First Substitute",
+    description: "",
+    fact: "The navy meaning is 'Absence of Flag officer or unit commander (in Port)'.",
+    imageUrl: "/images/First Substitute.png"
+  },
+  {
+    id: 29,
+    question: "What does this represent?",
+    correctAnswer: "First Substitute",
+    description: "",
+    fact: "The navy meaning is 'Absence of Chief of Staff (in Port)'.",
+    imageUrl: "/images/Second Substitute.png"
+  },
+  {
+    id: 30,
+    question: "What does this represent?",
+    correctAnswer: "Third Substitute",
+    description: "",
+    fact: "The navy meaning is 'Absence of Commanding Officer (in Port)'.",
+    imageUrl: "/images/Third Substitute.png"
   }
 ];
 
