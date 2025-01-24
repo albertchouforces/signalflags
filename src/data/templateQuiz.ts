@@ -254,10 +254,10 @@ export const templateQuestions: QuestionData[] = [
   {
     id: 27,
     question: "What does this represent?",
-    correctAnswer: "Code Answer",
+    correctAnswer: "Turn",
     description: "",
-    fact: "The navy meaning is 'Message is understood'.",
-    imageUrl: "/images/Code Answer.png"
+    fact: "",
+    imageUrl: "/images/Turn.png"
   },
   {
     id: 28,
@@ -488,8 +488,8 @@ export const templateQuestions: QuestionData[] = [
     question: "What does this represent?",
     correctAnswer: "Code",
     description: "",
-    fact: "It is also known as the Answering Pennant.",
-    imageUrl: "/images/Code.png"
+    fact: "The navy meaning is 'Message is understood'. It is also known as the Answering Pennant.",
+    imageUrl: "/images/Code Answer.png"
   },
   {
     id: 57,
@@ -578,14 +578,6 @@ export const templateQuestions: QuestionData[] = [
     description: "",
     fact: "",
     imageUrl: "/images/Sub Division.png"
-  },
-  {
-    id: 68,
-    question: "What does this represent?",
-    correctAnswer: "Turn",
-    description: "",
-    fact: "",
-    imageUrl: "/images/Turn.png"
   }
 ];
 
