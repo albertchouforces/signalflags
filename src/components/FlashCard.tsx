@@ -107,7 +107,7 @@ export function FlashCard({
                 />
               )}
             </div>
-            <p className="text-lg text-gray-600 italic text-center max-w-xl">{question.description}</p>
+            <p className="text-3xl text-gray-600 italic text-center max-w-xl">{question.description}</p>
           </div>
         </div>
 
