@@ -521,7 +521,7 @@ export const templateQuestions: QuestionData[] = [
     correctAnswer: "Flotilla",
     description: "",
     fact: "",
-    imageUrl: "/images/Flotilla .png"
+    imageUrl: "/images/Flotilla.png"
   },
   {
     id: 61,
