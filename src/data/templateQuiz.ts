@@ -63,8 +63,8 @@ export const templateQuestions: QuestionData[] = [
     id: 3,
     question: "What does this represent?",
     correctAnswer: "Charlie",
-    description: "The navy meaning is 'Yes (affirmative)'.",
-    fact: "",
+    description: "",
+    fact: "The navy meaning is 'Yes (affirmative)'.",
     imageUrl: "/images/Charlie.png"
   },
   {
@@ -270,7 +270,7 @@ export const templateQuestions: QuestionData[] = [
   {
     id: 29,
     question: "What does this represent?",
-    correctAnswer: "First Substitute",
+    correctAnswer: "Second Substitute",
     description: "",
     fact: "The navy meaning is 'Absence of Chief of Staff (in Port)'.",
     imageUrl: "/images/Second Substitute.png"
@@ -282,6 +282,310 @@ export const templateQuestions: QuestionData[] = [
     description: "",
     fact: "The navy meaning is 'Absence of Commanding Officer (in Port)'.",
     imageUrl: "/images/Third Substitute.png"
+  },
+  {
+    id: 31,
+    question: "What does this represent?",
+    correctAnswer: "Fourth Substitute",
+    description: "",
+    fact: "",
+    imageUrl: "/images/Fourth Substitute.png"
+  },
+  {
+    id: 32,
+    question: "What does this represent?",
+    correctAnswer: "One",
+    description: "",
+    fact: "",
+    imageUrl: "/images/One.png"
+  },
+  {
+    id: 33,
+    question: "What does this represent?",
+    correctAnswer: "Two",
+    description: "",
+    fact: "",
+    imageUrl: "/images/Two.png"
+  },
+  {
+    id: 34,
+    question: "What does this represent?",
+    correctAnswer: "Three",
+    description: "",
+    fact: "",
+    imageUrl: "/images/Three.png"
+  },
+  {
+    id: 35,
+    question: "What does this represent?",
+    correctAnswer: "Four",
+    description: "",
+    fact: "",
+    imageUrl: "/images/Four.png"
+  },
+  {
+    id: 36,
+    question: "What does this represent?",
+    correctAnswer: "Five",
+    description: "",
+    fact: "",
+    imageUrl: "/images/Five.png"
+  },
+  {
+    id: 37,
+    question: "What does this represent?",
+    correctAnswer: "Six",
+    description: "",
+    fact: "",
+    imageUrl: "/images/Six.png"
+  },
+  {
+    id: 38,
+    question: "What does this represent?",
+    correctAnswer: "Seven",
+    description: "",
+    fact: "",
+    imageUrl: "/images/Seven.png"
+  },
+  {
+    id: 39,
+    question: "What does this represent?",
+    correctAnswer: "Eight",
+    description: "",
+    fact: "",
+    imageUrl: "/images/Eight.png"
+  },
+  {
+    id: 40,
+    question: "What does this represent?",
+    correctAnswer: "Nine",
+    description: "",
+    fact: "",
+    imageUrl: "/images/Nine.png"
+  },
+  {
+    id: 41,
+    question: "What does this represent?",
+    correctAnswer: "Zero",
+    description: "",
+    fact: "",
+    imageUrl: "/images/Zero.png"
+  },
+  {
+    id: 42,
+    question: "What does this represent?",
+    correctAnswer: "Division",
+    description: "",
+    fact: "",
+    imageUrl: "/images/Division.png"
+  },
+  {
+    id: 43,
+    question: "What does this represent?",
+    correctAnswer: "Port Lower",
+    description: "",
+    fact: "",
+    imageUrl: "/images/Port Lower.png"
+  },
+  {
+    id: 44,
+    question: "What does this represent?",
+    correctAnswer: "Squadron Lower",
+    description: "",
+    fact: "",
+    imageUrl: "/images/Squadron Lower.png"
+  },
+  {
+    id: 45,
+    question: "What does this represent?",
+    correctAnswer: "Pennant One",
+    description: "",
+    fact: "",
+    imageUrl: "/images/Pennant One.png"
+  },
+  {
+    id: 46,
+    question: "What does this represent?",
+    correctAnswer: "Pennant Two",
+    description: "",
+    fact: "",
+    imageUrl: "/images/Pennant Two.png"
+  },
+  {
+    id: 47,
+    question: "What does this represent?",
+    correctAnswer: "Pennant Three",
+    description: "",
+    fact: "",
+    imageUrl: "/images/Pennant Three.png"
+  },
+  {
+    id: 48,
+    question: "What does this represent?",
+    correctAnswer: "Pennant Four",
+    description: "",
+    fact: "",
+    imageUrl: "/images/Pennant Four.png"
+  },
+  {
+    id: 49,
+    question: "What does this represent?",
+    correctAnswer: "Pennant Five",
+    description: "",
+    fact: "",
+    imageUrl: "/images/Pennant Five.png"
+  },
+  {
+    id: 50,
+    question: "What does this represent?",
+    correctAnswer: "Pennant Six",
+    description: "",
+    fact: "",
+    imageUrl: "/images/Pennant Six.png"
+  },
+  {
+    id: 51,
+    question: "What does this represent?",
+    correctAnswer: "Pennant Seven",
+    description: "",
+    fact: "",
+    imageUrl: "/images/Pennant Seven.png"
+  },
+  {
+    id: 52,
+    question: "What does this represent?",
+    correctAnswer: "Pennant Eight",
+    description: "",
+    fact: "",
+    imageUrl: "/images/Pennant Eight.png"
+  },
+  {
+    id: 53,
+    question: "What does this represent?",
+    correctAnswer: "Pennant Nine",
+    description: "",
+    fact: "",
+    imageUrl: "/images/Pennant Nine.png"
+  },
+  {
+    id: 54,
+    question: "What does this represent?",
+    correctAnswer: "Pennant Zero",
+    description: "",
+    fact: "",
+    imageUrl: "/images/Pennant Zero.png"
+  },
+  {
+    id: 55,
+    question: "What does this represent?",
+    correctAnswer: "Black",
+    description: "",
+    fact: "",
+    imageUrl: "/images/Black.png"
+  },
+  {
+    id: 56,
+    question: "What does this represent?",
+    correctAnswer: "Code",
+    description: "",
+    fact: "",
+    imageUrl: "/images/Code.png"
+  },
+  {
+    id: 57,
+    question: "What does this represent?",
+    correctAnswer: "Corpen",
+    description: "",
+    fact: "",
+    imageUrl: "/images/Corpen.png"
+  },
+  {
+    id: 58,
+    question: "What does this represent?",
+    correctAnswer: "Desig",
+    description: "",
+    fact: "",
+    imageUrl: "/images/Desig.png"
+  },
+  {
+    id: 59,
+    question: "What does this represent?",
+    correctAnswer: "Emergency",
+    description: "",
+    fact: "",
+    imageUrl: "/images/Emergency.png"
+  },
+  {
+    id: 60,
+    question: "What does this represent?",
+    correctAnswer: "Flotilla",
+    description: "",
+    fact: "",
+    imageUrl: "/images/Flotilla .png"
+  },
+  {
+    id: 61,
+    question: "What does this represent?",
+    correctAnswer: "Formation",
+    description: "",
+    fact: "",
+    imageUrl: "/images/Formation.png"
+  },
+  {
+    id: 62,
+    question: "What does this represent?",
+    correctAnswer: "Interogative",
+    description: "",
+    fact: "",
+    imageUrl: "/images/Interogative.png"
+  },
+  {
+    id: 63,
+    question: "What does this represent?",
+    correctAnswer: "Negative",
+    description: "",
+    fact: "",
+    imageUrl: "/images/Negative.png"
+  },
+  {
+    id: 64,
+    question: "What does this represent?",
+    correctAnswer: "Preparative",
+    description: "",
+    fact: "",
+    imageUrl: "/images/Preparative.png"
+  },
+  {
+    id: 65,
+    question: "What does this represent?",
+    correctAnswer: "Speed",
+    description: "",
+    fact: "",
+    imageUrl: "/images/Speed.png"
+  },
+  {
+    id: 66,
+    question: "What does this represent?",
+    correctAnswer: "Starboard",
+    description: "",
+    fact: "",
+    imageUrl: "/images/Starboard.png"
+  },
+  {
+    id: 67,
+    question: "What does this represent?",
+    correctAnswer: "Sub Division",
+    description: "",
+    fact: "",
+    imageUrl: "/images/Sub Division.png"
+  },
+  {
+    id: 68,
+    question: "What does this represent?",
+    correctAnswer: "Turn",
+    description: "",
+    fact: "",
+    imageUrl: "/images/Turn.png"
   }
 ];
 
