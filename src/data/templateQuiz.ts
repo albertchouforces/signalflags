@@ -56,7 +56,7 @@ export const COMBINED_QUIZ_CONFIG = {
   description: "Test your knowledge of all Signal Flags and Pennants.",
   themeColor: 'teal' as const,
   quiz_name: "sfp_combined",
-  startScreenImage: "/images/quiz3-start.png"
+  startScreenImage: "/images/quiz3-start.pngg"
 };
 
 // First Quiz Questions
