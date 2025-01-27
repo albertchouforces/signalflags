@@ -538,7 +538,7 @@ export const templateQuestions: QuestionData[] = [
     description: "",
     fact: "",
     imageUrl: "/images/Sub Division.png"
-  }
+  },
   {
     id: 63,
     question: "What does this represent?",
