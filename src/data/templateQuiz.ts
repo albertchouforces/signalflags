@@ -38,7 +38,7 @@ export const QUIZ_CONFIG = {
   description: "Test your knowledge of Signal Flags.",
   themeColor: 'purple' as const,  // Options: 'blue' | 'green' | 'sky' | 'red' | 'purple' | 'indigo' | 'amber' | 'emerald' | 'teal' | 'cyan';
   quiz_name: "signalflags", // Unique identifier for the quiz, used in database
-  startScreenImage: "/images/quiz-start.svg" // Optional: Image shown on start screen
+  startScreenImage: "/images/quiz-start.jpg" // Optional: Image shown on start screen
 };
 
 // Second Quiz Configuration (Red theme)
@@ -47,7 +47,7 @@ export const SECOND_QUIZ_CONFIG = {
   description: "Test your knowledge of Pennants.",
   themeColor: 'amber' as const,
   quiz_name: "pennants",
-  startScreenImage: "/images/quiz2-start.svg"
+  startScreenImage: "/images/quiz2-start.jpg"
 };
 
 // Combined Quiz Configuration (Green theme)
@@ -56,7 +56,7 @@ export const COMBINED_QUIZ_CONFIG = {
   description: "Test your knowledge of all Signal Flags and Pennants.",
   themeColor: 'teal' as const,
   quiz_name: "sfp_combined",
-  startScreenImage: "/images/quiz-start.svg"
+  startScreenImage: "/images/quiz3-start.pngg"
 };
 
 // First Quiz Questions
