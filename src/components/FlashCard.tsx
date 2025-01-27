@@ -23,6 +23,7 @@ export function FlashCard({
   const [showResult, setShowResult] = useState(false);
   const [imageLoaded, setImageLoaded] = useState(false);
   const [imageError, setImageError] = useState(false);
+  const [imageNaturalSize, setImageNaturalSize] = useState<{ width: number; height: number } | null>(null);
   const [options, setOptions] = useState<string[]>([]);
 
   // Set options only when question changes, ensuring uniqueness
@@ -44,6 +45,7 @@ export function FlashCard({
     setShowResult(false);
     setImageLoaded(false);
     setImageError(false);
+    setImageNaturalSize(null);
   }, [question]);
 
   const handleAnswer = (answer: string) => {
@@ -60,6 +62,30 @@ export function FlashCard({
     setImageLoaded(true);
   };
 
+  const handleImageLoad = (event: React.SyntheticEvent<HTMLImageElement>) => {
+    const img = event.target as HTMLImageElement;
+    setImageNaturalSize({
+      width: img.naturalWidth,
+      height: img.naturalHeight
+    });
+    setImageLoaded(true);
+  };
+
+  const getImageStyle = () => {
+    if (!imageNaturalSize) return {};
+    
+    const maxWidth = Math.min(imageNaturalSize.width, 800); // Maximum width we want to allow
+    const maxHeight = Math.min(imageNaturalSize.height, 600); // Maximum height we want to allow
+    
+    return {
+      maxWidth: `${maxWidth}px`,
+      maxHeight: `${maxHeight}px`,
+      width: 'auto',
+      height: 'auto',
+      mixBlendMode: 'multiply' as const // Helps with transparency
+    };
+  };
+
   const getOptionStyles = (option: string) => {
     if (!showResult) {
       return "bg-gray-100 hover:bg-gray-200";
@@ -73,6 +99,12 @@ export function FlashCard({
     return "bg-gray-100";
   };
 
+  // Debug logging for question progress
+  useEffect(() => {
+    console.log(`Showing question ${questionNumber} of ${totalQuestions}`);
+    console.log('Current question:', question);
+  }, [questionNumber, totalQuestions, question]);
+
   return (
     <div className="w-full max-w-3xl bg-white rounded-xl shadow-lg">
       <div className="flex flex-col w-full">
@@ -82,18 +114,17 @@ export function FlashCard({
             <h3 className="text-xl font-semibold text-gray-800">{question.question}</h3>
             <span className="text-sm text-gray-500">Question {questionNumber} of {totalQuestions}</span>
           </div>
-          {/* Image Container with improved sizing */}
           <div className="flex flex-col items-center mb-4">
-            <div className="w-full aspect-[16/9] relative rounded-lg overflow-hidden bg-transparent mb-4">
+            <div className="w-full max-w-2xl rounded-lg flex items-center justify-center mb-4 p-4">
               {!imageLoaded && !imageError && (
-                <div className="absolute inset-0 flex flex-col items-center justify-center bg-gray-50">
+                <div className="w-full h-64 flex flex-col items-center justify-center bg-transparent rounded-lg border-2 border-dashed border-gray-300">
                   <div className="text-gray-400 text-center px-4">
                     <div className="text-sm font-medium mb-1">Loading Image</div>
                   </div>
                 </div>
               )}
               {imageError ? (
-                <div className="absolute inset-0 flex flex-col items-center justify-center bg-gray-50 text-gray-400">
+                <div className="w-full h-64 flex flex-col items-center justify-center text-gray-400">
                   <ImageOff size={32} />
                   <p className="text-sm mt-2">Image not available</p>
                 </div>
@@ -101,8 +132,9 @@ export function FlashCard({
                 <img
                   src={question.imageUrl}
                   alt="Question"
-                  className={`w-full h-full object-contain ${imageLoaded ? 'block' : 'hidden'}`}
-                  onLoad={() => setImageLoaded(true)}
+                  className={`${imageLoaded ? 'block' : 'hidden'} bg-transparent`}
+                  style={getImageStyle()}
+                  onLoad={handleImageLoad}
                   onError={handleImageError}
                 />
               )}

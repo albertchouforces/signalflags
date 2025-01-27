@@ -32,16 +32,34 @@
 
 import type { QuestionData } from '../types';
 
-// Quiz display configuration - Customize these values
+// Quiz display configuration - First Quiz (Blue theme)
 export const QUIZ_CONFIG = {
-  title: "Navy Signal Flags and Pennants",
-  description: "Test your knowledge of signal flags and pennants",
-  themeColor: 'purple' as const,  // Available colors: 'blue' | 'green' | 'sky' | 'red' | 'purple' | 'orange' | 'pink'
-  quiz_name: "signal_flags", // Unique identifier for the quiz, used in database
-  startScreenImage: "/images/quiz-start.jpg" // Optional: Image shown on start screen
+  title: "Signal Flags",
+  description: "Test your knowledge of Signal Flags.",
+  themeColor: 'purple' as const,  // Options: 'blue' | 'green' | 'sky' | 'red' | 'purple' | 'indigo' | 'amber' | 'emerald' | 'teal' | 'cyan';
+  quiz_name: "signalflags", // Unique identifier for the quiz, used in database
+  startScreenImage: "/images/quiz-start.svg" // Optional: Image shown on start screen
 };
 
-// Example questions - Replace with your own
+// Second Quiz Configuration (Red theme)
+export const SECOND_QUIZ_CONFIG = {
+  title: "Pennants",
+  description: "Test your knowledge of Pennants.",
+  themeColor: 'amber' as const,
+  quiz_name: "pennants",
+  startScreenImage: "/images/quiz2-start.svg"
+};
+
+// Combined Quiz Configuration (Green theme)
+export const COMBINED_QUIZ_CONFIG = {
+  title: "Signal Flags and Pennants",
+  description: "Test your knowledge of all Signal Flags and Pennants.",
+  themeColor: 'teal' as const,
+  quiz_name: "sfp_combined",
+  startScreenImage: "/images/quiz-start.svg"
+};
+
+// First Quiz Questions
 export const templateQuestions: QuestionData[] = [
   {
     id: 1,
@@ -354,9 +372,13 @@ export const templateQuestions: QuestionData[] = [
     description: "",
     fact: "",
     imageUrl: "/images/Squadron.png"
-  },
+  }
+];
+
+// Second Quiz Questions
+export const secondQuizQuestions: QuestionData[] = [
   {
-    id: 40,
+    id: 1,
     question: "What does this represent?",
     correctAnswer: "Pennant One",
     description: "",
@@ -364,7 +386,7 @@ export const templateQuestions: QuestionData[] = [
     imageUrl: "/images/Pennant One.png"
   },
   {
-    id: 41,
+    id: 2,
     question: "What does this represent?",
     correctAnswer: "Pennant Two",
     description: "",
@@ -372,7 +394,7 @@ export const templateQuestions: QuestionData[] = [
     imageUrl: "/images/Pennant Two.png"
   },
   {
-    id: 42,
+    id: 3,
     question: "What does this represent?",
     correctAnswer: "Pennant Three",
     description: "",
@@ -380,7 +402,7 @@ export const templateQuestions: QuestionData[] = [
     imageUrl: "/images/Pennant Three.png"
   },
   {
-    id: 43,
+    id: 4,
     question: "What does this represent?",
     correctAnswer: "Pennant Four",
     description: "",
@@ -388,7 +410,7 @@ export const templateQuestions: QuestionData[] = [
     imageUrl: "/images/Pennant Four.png"
   },
   {
-    id: 44,
+    id: 5,
     question: "What does this represent?",
     correctAnswer: "Pennant Five",
     description: "",
@@ -396,7 +418,7 @@ export const templateQuestions: QuestionData[] = [
     imageUrl: "/images/Pennant Five.png"
   },
   {
-    id: 45,
+    id: 6,
     question: "What does this represent?",
     correctAnswer: "Pennant Six",
     description: "",
@@ -404,7 +426,7 @@ export const templateQuestions: QuestionData[] = [
     imageUrl: "/images/Pennant Six.png"
   },
   {
-    id: 46,
+    id: 7,
     question: "What does this represent?",
     correctAnswer: "Pennant Seven",
     description: "",
@@ -412,7 +434,7 @@ export const templateQuestions: QuestionData[] = [
     imageUrl: "/images/Pennant Seven.png"
   },
   {
-    id: 47,
+    id: 8,
     question: "What does this represent?",
     correctAnswer: "Pennant Eight",
     description: "",
@@ -420,7 +442,7 @@ export const templateQuestions: QuestionData[] = [
     imageUrl: "/images/Pennant Eight.png"
   },
   {
-    id: 48,
+    id: 9,
     question: "What does this represent?",
     correctAnswer: "Pennant Nine",
     description: "",
@@ -428,7 +450,7 @@ export const templateQuestions: QuestionData[] = [
     imageUrl: "/images/Pennant Nine.png"
   },
   {
-    id: 49,
+    id: 10,
     question: "What does this represent?",
     correctAnswer: "Pennant Zero",
     description: "",
@@ -436,7 +458,7 @@ export const templateQuestions: QuestionData[] = [
     imageUrl: "/images/Pennant Zero.png"
   },
   {
-    id: 50,
+    id: 11,
     question: "What does this represent?",
     correctAnswer: "Black",
     description: "",
@@ -444,7 +466,7 @@ export const templateQuestions: QuestionData[] = [
     imageUrl: "/images/Black.png"
   },
   {
-    id: 51,
+    id: 12,
     question: "What does this represent?",
     correctAnswer: "Code",
     description: "",
@@ -452,7 +474,7 @@ export const templateQuestions: QuestionData[] = [
     imageUrl: "/images/Code Answer.png"
   },
   {
-    id: 52,
+    id: 13,
     question: "What does this represent?",
     correctAnswer: "Corpen",
     description: "",
@@ -460,7 +482,7 @@ export const templateQuestions: QuestionData[] = [
     imageUrl: "/images/Corpen.png"
   },
   {
-    id: 53,
+    id: 14,
     question: "What does this represent?",
     correctAnswer: "Desig",
     description: "",
@@ -468,7 +490,7 @@ export const templateQuestions: QuestionData[] = [
     imageUrl: "/images/Desig.png"
   },
   {
-    id: 54,
+    id: 15,
     question: "What does this represent?",
     correctAnswer: "Emergency",
     description: "",
@@ -476,7 +498,7 @@ export const templateQuestions: QuestionData[] = [
     imageUrl: "/images/Emergency.png"
   },
   {
-    id: 55,
+    id: 16,
     question: "What does this represent?",
     correctAnswer: "Flotilla",
     description: "",
@@ -484,7 +506,7 @@ export const templateQuestions: QuestionData[] = [
     imageUrl: "/images/Flotilla.png"
   },
   {
-    id: 56,
+    id: 17,
     question: "What does this represent?",
     correctAnswer: "Formation",
     description: "",
@@ -492,7 +514,7 @@ export const templateQuestions: QuestionData[] = [
     imageUrl: "/images/Formation.png"
   },
   {
-    id: 57,
+    id: 18,
     question: "What does this represent?",
     correctAnswer: "Interogative",
     description: "",
@@ -500,7 +522,7 @@ export const templateQuestions: QuestionData[] = [
     imageUrl: "/images/Interogative.png"
   },
   {
-    id: 58,
+    id: 19,
     question: "What does this represent?",
     correctAnswer: "Negative",
     description: "",
@@ -508,7 +530,7 @@ export const templateQuestions: QuestionData[] = [
     imageUrl: "/images/Negative.png"
   },
   {
-    id: 59,
+    id: 20,
     question: "What does this represent?",
     correctAnswer: "Preparative",
     description: "",
@@ -516,7 +538,7 @@ export const templateQuestions: QuestionData[] = [
     imageUrl: "/images/Preparative.png"
   },
   {
-    id: 60,
+    id: 21,
     question: "What does this represent?",
     correctAnswer: "Speed",
     description: "",
@@ -524,7 +546,7 @@ export const templateQuestions: QuestionData[] = [
     imageUrl: "/images/Speed.png"
   },
   {
-    id: 61,
+    id: 22,
     question: "What does this represent?",
     correctAnswer: "Starboard",
     description: "",
@@ -532,7 +554,7 @@ export const templateQuestions: QuestionData[] = [
     imageUrl: "/images/Starboard.png"
   },
   {
-    id: 62,
+    id: 23,
     question: "What does this represent?",
     correctAnswer: "Sub Division",
     description: "",
@@ -540,7 +562,7 @@ export const templateQuestions: QuestionData[] = [
     imageUrl: "/images/Sub Division.png"
   },
   {
-    id: 63,
+    id: 24,
     question: "What does this represent?",
     correctAnswer: "Turn",
     description: "",
@@ -548,7 +570,7 @@ export const templateQuestions: QuestionData[] = [
     imageUrl: "/images/Turn.png"
   },
   {
-    id: 64,
+    id: 25,
     question: "What does this represent?",
     correctAnswer: "First Substitute",
     description: "",
@@ -556,7 +578,7 @@ export const templateQuestions: QuestionData[] = [
     imageUrl: "/images/First Substitute.png"
   },
   {
-    id: 65,
+    id: 26,
     question: "What does this represent?",
     correctAnswer: "Second Substitute",
     description: "",
@@ -564,7 +586,7 @@ export const templateQuestions: QuestionData[] = [
     imageUrl: "/images/Second Substitute.png"
   },
   {
-    id: 66,
+    id: 27,
     question: "What does this represent?",
     correctAnswer: "Third Substitute",
     description: "",
@@ -572,7 +594,7 @@ export const templateQuestions: QuestionData[] = [
     imageUrl: "/images/Third Substitute.png"
   },
   {
-    id: 67,
+    id: 28,
     question: "What does this represent?",
     correctAnswer: "Fourth Substitute",
     description: "",
@@ -581,45 +603,17 @@ export const templateQuestions: QuestionData[] = [
   }
 ];
 
-// =================================================================
-// COMPLETE EXAMPLE - Geography Quiz
-// =================================================================
-/*
-export const QUIZ_CONFIG = {
-  title: "World Capitals Quiz",
-  description: "Test your knowledge of famous capital cities",
-  themeColor: 'green' as const,
-  quiz_name: "world_capitals_quiz",
-  startScreenImage: "/images/capitals-intro.jpg"
-};
-
-export const capitalQuestions: QuestionData[] = [
-  {
-    id: 1,
-    question: "What capital city is this?",
-    correctAnswer: "Tokyo",
-    description: "The most populous metropolitan area in the world",
-    fact: "Tokyo was originally known as Edo until 1868",
-    imageUrl: "/images/tokyo.jpg"
-  },
-  {
-    id: 2,
-    question: "Which European capital is shown here?",
-    correctAnswer: "Paris",
-    description: "The capital and largest city of France",
-    fact: "Paris has 20 different administrative districts called arrondissements",
-    imageUrl: "/images/paris.jpg"
-  },
-  {
-    id: 3,
-    question: "Name this South American capital",
-    correctAnswer: "Buenos Aires",
-    description: "The capital of Argentina",
-    fact: "Buenos Aires means 'fair winds' in Spanish",
-    imageUrl: "/images/buenos-aires.jpg"
-  }
+// Combined Questions Array
+export const combinedQuestions: QuestionData[] = [
+  ...templateQuestions.map(q => ({
+    ...q,
+    id: q.id // Keep original IDs
+  })),
+  ...secondQuizQuestions.map(q => ({
+    ...q,
+    id: q.id + templateQuestions.length // Offset IDs to avoid conflicts
+  }))
 ];
-*/
 
 // =================================================================
 // TIPS FOR GOOD QUESTIONS

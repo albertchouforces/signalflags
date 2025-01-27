@@ -1,5 +1,4 @@
 import { createClient } from '@supabase/supabase-js';
-import { QUIZ_CONFIG } from '../data/templateQuiz';
 
 // TODO: Replace these with your Supabase project credentials
 // You can find these in your Supabase project settings -> API
@@ -17,13 +16,16 @@ export interface GlobalScoreEntry {
   service: string;  // Changed from quiz_name to service
 }
 
-export async function saveGlobalScore(scoreData: Omit<GlobalScoreEntry, 'service'>): Promise<boolean> {
+export async function saveGlobalScore(
+  scoreData: Omit<GlobalScoreEntry, 'service'>, 
+  quizName: string
+): Promise<boolean> {
   try {
     const { error } = await supabase
       .from('global_scores')
       .insert([{
         ...scoreData,
-        service: QUIZ_CONFIG.quiz_name // Still using quiz_name from config but mapping to service field
+        service: quizName
       }]);
 
     if (error) {
@@ -37,12 +39,12 @@ export async function saveGlobalScore(scoreData: Omit<GlobalScoreEntry, 'service
   }
 }
 
-export async function getGlobalScores(): Promise<GlobalScoreEntry[]> {
+export async function getGlobalScores(quizName: string): Promise<GlobalScoreEntry[]> {
   try {
     const { data, error } = await supabase
       .from('global_scores')
       .select('*')
-      .eq('service', QUIZ_CONFIG.quiz_name) // Using service field in the query
+      .eq('service', quizName)
       .order('score', { ascending: false })
       .order('time', { ascending: true })
       .limit(100);

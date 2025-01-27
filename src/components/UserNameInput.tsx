@@ -3,7 +3,6 @@ import { HighScoreEntry, QuizConfig } from '../types';
 import { saveGlobalScore, getGlobalScores } from '../lib/supabase';
 import { Trophy, Loader2, Medal as MedalIcon } from 'lucide-react';
 import { Medal } from './Medal';
-import { templateQuestions } from '../data/templateQuiz';
 import { ENABLE_GLOBAL_LEADERBOARD } from '../config/features';
 
 interface UserNameInputProps {
@@ -12,6 +11,7 @@ interface UserNameInputProps {
   currentTime: number;
   highScores: HighScoreEntry[];
   quizConfig: QuizConfig;
+  totalQuestions: number;  // Add this prop to get the total number of questions
 }
 
 export function UserNameInput({ 
@@ -19,13 +19,14 @@ export function UserNameInput({
   currentScore, 
   currentTime, 
   highScores, 
-  quizConfig 
+  quizConfig,
+  totalQuestions
 }: UserNameInputProps) {
   const [userName, setUserName] = useState('');
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [globalRank, setGlobalRank] = useState<number | null>(null);
-  const [isLoadingGlobalRank, setIsLoadingGlobalRank] = useState(false); // Changed to start as false
+  const [isLoadingGlobalRank, setIsLoadingGlobalRank] = useState(false);
 
   useEffect(() => {
     // Only fetch global rank if the feature is enabled
@@ -37,7 +38,7 @@ export function UserNameInput({
     const fetchGlobalRank = async () => {
       setIsLoadingGlobalRank(true);
       try {
-        const globalScores = await getGlobalScores();
+        const globalScores = await getGlobalScores(quizConfig.quiz_name);
         const position = globalScores.findIndex(score => {
           if (currentScore > score.score) return true;
           if (currentScore === score.score && currentTime < score.time) return true;
@@ -53,7 +54,7 @@ export function UserNameInput({
     };
 
     fetchGlobalRank();
-  }, [currentScore, currentTime]);
+  }, [currentScore, currentTime, quizConfig.quiz_name]);
 
   const calculateLocalRankPosition = (): number | null => {
     const position = highScores.findIndex(score => {
@@ -113,7 +114,8 @@ export function UserNameInput({
 
       // Only attempt to save to global database if the feature is enabled
       if (ENABLE_GLOBAL_LEADERBOARD) {
-        const accuracy = Math.round((currentScore / templateQuestions.length) * 100);
+        // Calculate accuracy based on total questions instead of highScores length
+        const accuracy = Math.round((currentScore / totalQuestions) * 100);
         
         console.log('Saving global score...', {
           user_name: trimmedUserName,
@@ -128,7 +130,7 @@ export function UserNameInput({
           accuracy,
           time: currentTime,
           date: new Date().toISOString()
-        });
+        }, quizConfig.quiz_name);
 
         if (!success) {
           console.error('Failed to save global score');

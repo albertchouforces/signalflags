@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import { getGlobalScores, type GlobalScoreEntry } from '../lib/supabase';
 import { Medal } from './Medal';
 import { Trophy, Loader2, X } from 'lucide-react';
+import { QUIZ_CONFIG, SECOND_QUIZ_CONFIG, COMBINED_QUIZ_CONFIG } from '../data/templateQuiz';
+import type { QuizConfig } from '../types';
 
 interface GlobalLeaderboardProps {
   onClose: () => void;
@@ -11,13 +13,23 @@ export function GlobalLeaderboard({ onClose }: GlobalLeaderboardProps) {
   const [scores, setScores] = useState<GlobalScoreEntry[]>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [selectedQuiz, setSelectedQuiz] = useState<'quiz1' | 'quiz2' | 'combined'>('quiz1');
+
+  const currentQuizConfig = 
+    selectedQuiz === 'quiz2' ? SECOND_QUIZ_CONFIG : 
+    selectedQuiz === 'combined' ? COMBINED_QUIZ_CONFIG : 
+    QUIZ_CONFIG;
 
   useEffect(() => {
     const fetchScores = async () => {
       setLoading(true);
       setError(null);
       try {
-        const data = await getGlobalScores();
+        const quizName = 
+          selectedQuiz === 'quiz2' ? SECOND_QUIZ_CONFIG.quiz_name : 
+          selectedQuiz === 'combined' ? COMBINED_QUIZ_CONFIG.quiz_name :
+          QUIZ_CONFIG.quiz_name;
+        const data = await getGlobalScores(quizName);
         setScores(data);
       } catch (err) {
         setError('Failed to load global scores. Please try again later.');
@@ -27,7 +39,7 @@ export function GlobalLeaderboard({ onClose }: GlobalLeaderboardProps) {
     };
 
     fetchScores();
-  }, []);
+  }, [selectedQuiz]);
 
   const formatTime = (ms: number) => {
     const minutes = Math.floor(ms / 60000);
@@ -44,6 +56,23 @@ export function GlobalLeaderboard({ onClose }: GlobalLeaderboardProps) {
       default: return <span className="w-7 h-7 flex items-center justify-center">{index + 1}</span>;
     }
   };
+
+  const QuizSelector = ({ config, isSelected, onClick }: { 
+    config: QuizConfig; 
+    isSelected: boolean; 
+    onClick: () => void;
+  }) => (
+    <button
+      onClick={onClick}
+      className={`px-4 py-2 rounded-lg font-medium transition-colors ${
+        isSelected 
+          ? `bg-${config.themeColor}-600 text-white` 
+          : `text-${config.themeColor}-600 hover:bg-${config.themeColor}-50`
+      }`}
+    >
+      {config.title}
+    </button>
+  );
 
   return (
     <div className="fixed inset-0 bg-black/50 flex items-center justify-center p-4 z-50">
@@ -63,12 +92,29 @@ export function GlobalLeaderboard({ onClose }: GlobalLeaderboardProps) {
             </button>
           </div>
 
+          <div className="flex gap-4">
+            <QuizSelector 
+              config={QUIZ_CONFIG} 
+              isSelected={selectedQuiz === 'quiz1'} 
+              onClick={() => setSelectedQuiz('quiz1')} 
+            />
+            <QuizSelector 
+              config={SECOND_QUIZ_CONFIG} 
+              isSelected={selectedQuiz === 'quiz2'} 
+              onClick={() => setSelectedQuiz('quiz2')} 
+            />
+            <QuizSelector 
+              config={COMBINED_QUIZ_CONFIG} 
+              isSelected={selectedQuiz === 'combined'} 
+              onClick={() => setSelectedQuiz('combined')} 
+            />
+          </div>
         </div>
 
         <div className="flex-1 overflow-auto p-6">
           {loading ? (
             <div className="flex items-center justify-center h-full">
-              <Loader2 className="animate-spin text-gray-500" size={32} />
+              <Loader2 className={`animate-spin text-${currentQuizConfig.themeColor}-500`} size={32} />
             </div>
           ) : error ? (
             <div className="text-center text-red-600 p-4">
@@ -88,7 +134,10 @@ export function GlobalLeaderboard({ onClose }: GlobalLeaderboardProps) {
               </thead>
               <tbody>
                 {scores.map((score, index) => (
-                  <tr key={index} className="border-t border-gray-100">
+                  <tr 
+                    key={`${score.user_name}-${index}`} 
+                    className={`border-t border-gray-100 hover:bg-${currentQuizConfig.themeColor}-50 transition-colors`}
+                  >
                     <td className="py-2">{getPositionDisplay(index)}</td>
                     <td className="py-2 font-medium">{score.user_name}</td>
                     <td className="py-2">{score.score}</td>
