@@ -274,7 +274,7 @@ export const templateQuestions: QuestionData[] = [
     question: "What does this represent?",
     correctAnswer: "One",
     description: "Morse Code .----",
-    fact: "The navy meaning is 'ASW Action Table'",
+    fact: "Single meaning: 'ASW Action Table'",
     imageUrl: "/images/One.png"
   },
   {
@@ -282,7 +282,7 @@ export const templateQuestions: QuestionData[] = [
     question: "What does this represent?",
     correctAnswer: "Two",
     description: "Morse Code ..---",
-    fact: "The navy meaning is 'Surface Action Table'",
+    fact: "Single meaning: 'Surface Action Table'",
     imageUrl: "/images/Two.png"
   },
   {
@@ -290,7 +290,7 @@ export const templateQuestions: QuestionData[] = [
     question: "What does this represent?",
     correctAnswer: "Three",
     description: "Morse Code ...--",
-    fact: "The navy meaning is 'Boat signal. (Steer away)'",
+    fact: "Single meaning: 'Boat signal. (Steer away)'",
     imageUrl: "/images/Three.png"
   },
   {
@@ -298,7 +298,7 @@ export const templateQuestions: QuestionData[] = [
     question: "What does this represent?",
     correctAnswer: "Four",
     description: "Morse Code ....-",
-    fact: "The navy meaning is 'ASW Exercises.'",
+    fact: "Single meaning: 'ASW Exercises.'",
     imageUrl: "/images/Four.png"
   },
   {
@@ -306,7 +306,7 @@ export const templateQuestions: QuestionData[] = [
     question: "What does this represent?",
     correctAnswer: "Five",
     description: "Morse Code .....",
-    fact: "The navy meaning is 'Breakdown.'",
+    fact: "Single meaning: 'Breakdown.'",
     imageUrl: "/images/Five.png"
   },
   {
@@ -314,7 +314,7 @@ export const templateQuestions: QuestionData[] = [
     question: "What does this represent?",
     correctAnswer: "Six",
     description: "Morse Code -....",
-    fact: "The navy meaning is 'Act at your discretion.'",
+    fact: "Single meaning: 'Act at your discretion.'",
     imageUrl: "/images/Six.png"
   },
   {
@@ -322,7 +322,7 @@ export const templateQuestions: QuestionData[] = [
     question: "What does this represent?",
     correctAnswer: "Seven",
     description: "Morse Code --...",
-    fact: "The navy meaning is 'AAW Action Table.'",
+    fact: "Single meaning: 'AAW Action Table.'",
     imageUrl: "/images/Seven.png"
   },
   {
@@ -330,7 +330,7 @@ export const templateQuestions: QuestionData[] = [
     question: "What does this represent?",
     correctAnswer: "Eight",
     description: "Morse Code ---..",
-    fact: "The navy meaning is 'Boat signal. (Steer towards)'",
+    fact: "Single meaning: 'Boat signal. (Steer towards)'",
     imageUrl: "/images/Eight.png"
   },
   {
@@ -338,7 +338,7 @@ export const templateQuestions: QuestionData[] = [
     question: "What does this represent?",
     correctAnswer: "Nine",
     description: "Morse Code ----.",
-    fact: "The navy meaning is 'Torpedo Action Table.'",
+    fact: "Single meaning: 'Torpedo Action Table.'",
     imageUrl: "/images/Nine.png"
   },
   {
@@ -346,7 +346,7 @@ export const templateQuestions: QuestionData[] = [
     question: "What does this represent?",
     correctAnswer: "Zero",
     description: "Morse Code -----",
-    fact: "The navy meaning is 'Guard Mail. Military Guard.'.",
+    fact: "Single meaning: 'Guard Mail. Military Guard.'.",
     imageUrl: "/images/Zero.png"
   },
   {
@@ -362,7 +362,7 @@ export const templateQuestions: QuestionData[] = [
     question: "What does this represent?",
     correctAnswer: "Port",
     description: "",
-    fact: "The navy meaning is 'Indefinite turn to Port. Out of Routine.'",
+    fact: "Single meaning: 'Indefinite turn to Port. Out of Routine.'",
     imageUrl: "/images/Port.png"
   },
   {
@@ -470,7 +470,7 @@ export const secondQuizQuestions: QuestionData[] = [
     question: "What does this represent?",
     correctAnswer: "Code",
     description: "",
-    fact: "The navy meaning is 'Acknowledgement. Fractions. Use INTERCO.' It is also known as the Answering Pennant.",
+    fact: "Single meaning: 'Acknowledgement. Fractions. Use INTERCO.' It is also known as the Answering Pennant.",
     imageUrl: "/images/Code Answer.png"
   },
   {
@@ -478,7 +478,7 @@ export const secondQuizQuestions: QuestionData[] = [
     question: "What does this represent?",
     correctAnswer: "Corpen",
     description: "",
-    fact: "The navy meaning is 'Stop the turn.'",
+    fact: "Single meaning: 'Stop the turn.'",
     imageUrl: "/images/Corpen.png"
   },
   {
@@ -486,7 +486,7 @@ export const secondQuizQuestions: QuestionData[] = [
     question: "What does this represent?",
     correctAnswer: "Desig",
     description: "",
-    fact: "The navy meaning is 'Plaint Text. Proceeding to Station/Berth. *Daylight Signalling lantern. Acknowledge DSL.*'",
+    fact: "Single meaning: 'Plaint Text. Proceeding to Station/Berth. *Daylight Signalling lantern. Acknowledge DSL.*'",
     imageUrl: "/images/Desig.png"
   },
   {
@@ -494,7 +494,7 @@ export const secondQuizQuestions: QuestionData[] = [
     question: "What does this represent?",
     correctAnswer: "Emergency",
     description: "",
-    fact: "The navy meaning is 'Signal(s) flying are to be obeyed as soon as understood.'",
+    fact: "Single meaning: 'Signal(s) flying are to be obeyed as soon as understood.'",
     imageUrl: "/images/Emergency.png"
   },
   {
@@ -509,7 +509,7 @@ export const secondQuizQuestions: QuestionData[] = [
     id: 17,
     question: "What does this represent?",
     correctAnswer: "Formation",
-    description: "The navy meaning is 'Refuse Boat is required.'",
+    description: "Single meaning: 'Refuse Boat is required.'",
     fact: "",
     imageUrl: "/images/Formation.png"
   },
@@ -518,7 +518,7 @@ export const secondQuizQuestions: QuestionData[] = [
     question: "What does this represent?",
     correctAnswer: "Interogative",
     description: "",
-    fact: "The navy meaning is 'Signals not understood.'",
+    fact: "Single meaning: 'Signals not understood.'",
     imageUrl: "/images/Interogative.png"
   },
   {
@@ -526,7 +526,7 @@ export const secondQuizQuestions: QuestionData[] = [
     question: "What does this represent?",
     correctAnswer: "Negative",
     description: "",
-    fact: "The navy meaning is 'Negative. Flag Hoist Exemp Addressees.'",
+    fact: "Single meaning: 'Negative. Flag Hoist Exemp Addressees.'",
     imageUrl: "/images/Negative.png"
   },
   {
@@ -534,7 +534,7 @@ export const secondQuizQuestions: QuestionData[] = [
     question: "What does this represent?",
     correctAnswer: "Preparative",
     description: "",
-    fact: "The navy meaning is 'Replenishing (Receiving Vessel). Colours & Sunset. Preparative.'",
+    fact: "Single meaning: 'Replenishing (Receiving Vessel). Colours & Sunset. Preparative.'",
     imageUrl: "/images/Preparative.png"
   },
   {
@@ -550,7 +550,7 @@ export const secondQuizQuestions: QuestionData[] = [
     question: "What does this represent?",
     correctAnswer: "Starboard",
     description: "",
-    fact: "The navy meaning is 'Indefinite turn to Starboard SCOPA.'",
+    fact: "Single meaning: 'Indefinite turn to Starboard SCOPA.'",
     imageUrl: "/images/Starboard.png"
   },
   {
@@ -566,7 +566,7 @@ export const secondQuizQuestions: QuestionData[] = [
     question: "What does this represent?",
     correctAnswer: "Turn",
     description: "",
-    fact: "The navy meaning is 'Water barge is required.'",
+    fact: "Single meaning: 'Water barge is required.'",
     imageUrl: "/images/Turn.png"
   },
   {
@@ -574,7 +574,7 @@ export const secondQuizQuestions: QuestionData[] = [
     question: "What does this represent?",
     correctAnswer: "First Substitute",
     description: "",
-    fact: "The navy meaning is 'Absence of Flag officer or unit commander (in Port).'",
+    fact: "Single meaning: 'Absentee Indicator - Flag Officer or Sqn Commander.'",
     imageUrl: "/images/First Substitute.png"
   },
   {
@@ -582,7 +582,7 @@ export const secondQuizQuestions: QuestionData[] = [
     question: "What does this represent?",
     correctAnswer: "Second Substitute",
     description: "",
-    fact: "The navy meaning is 'Absence of Chief of Staff (in Port).'",
+    fact: "Single meaning: 'Absentee Indicator - Chief of Staff.'",
     imageUrl: "/images/Second Substitute.png"
   },
   {
@@ -590,7 +590,7 @@ export const secondQuizQuestions: QuestionData[] = [
     question: "What does this represent?",
     correctAnswer: "Third Substitute",
     description: "",
-    fact: "The navy meaning is 'Absence of Commanding Officer (in Port)'.",
+    fact: "Single meaning: 'Absentee Indicator - Commanding Officer/X.O.'",
     imageUrl: "/images/Third Substitute.png"
   },
   {
@@ -598,7 +598,7 @@ export const secondQuizQuestions: QuestionData[] = [
     question: "What does this represent?",
     correctAnswer: "Fourth Substitute",
     description: "",
-    fact: "The navy meaning is 'Absence of Civil or Military Official'.",
+    fact: "Single meaning: 'Absentee Indicator - Civil or Military Official.'",
     imageUrl: "/images/Fourth Substitute.png"
   }
 ];
