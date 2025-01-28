@@ -74,30 +74,15 @@ export function FlashCard({
   const getImageStyle = () => {
     if (!imageNaturalSize) return {};
     
-    const aspectRatio = imageNaturalSize.width / imageNaturalSize.height;
-    const maxWidth = 800; // Maximum width we want to allow
-    const maxHeight = 600; // Maximum height we want to allow
-
-    let finalWidth = imageNaturalSize.width;
-    let finalHeight = imageNaturalSize.height;
-
-    // If the image is larger than our maximums, scale it down proportionally
-    if (finalWidth > maxWidth) {
-      finalWidth = maxWidth;
-      finalHeight = finalWidth / aspectRatio;
-    }
-
-    if (finalHeight > maxHeight) {
-      finalHeight = maxHeight;
-      finalWidth = finalHeight * aspectRatio;
-    }
-
+    const maxWidth = Math.min(imageNaturalSize.width, 800); // Maximum width we want to allow
+    const maxHeight = Math.min(imageNaturalSize.height, 600); // Maximum height we want to allow
+    
     return {
-      width: `${finalWidth}px`,
-      height: `${finalHeight}px`,
-      objectFit: 'contain' as const,
-      mixBlendMode: 'multiply' as const, // Helps with transparency
-      margin: '0 auto' // Centers the image horizontally
+      maxWidth: `${maxWidth}px`,
+      maxHeight: `${maxHeight}px`,
+      width: 'auto',
+      height: 'auto',
+      mixBlendMode: 'multiply' as const // Helps with transparency
     };
   };
 
@@ -114,6 +99,12 @@ export function FlashCard({
     return "bg-gray-100";
   };
 
+  // Debug logging for question progress
+  useEffect(() => {
+    console.log(`Showing question ${questionNumber} of ${totalQuestions}`);
+    console.log('Current question:', question);
+  }, [questionNumber, totalQuestions, question]);
+
   return (
     <div className="w-full max-w-3xl bg-white rounded-xl shadow-lg">
       <div className="flex flex-col w-full">
@@ -124,16 +115,20 @@ export function FlashCard({
             <span className="text-sm text-gray-500">Question {questionNumber} of {totalQuestions}</span>
           </div>
           <div className="flex flex-col items-center mb-4">
+<<<<<<< HEAD
             <div className="w-full flex items-center justify-center mb-4 p-4 min-h-[200px]">
+=======
+            <div className="w-full max-w-2xl rounded-lg flex items-center justify-center mb-4 p-4">
+>>>>>>> parent of bdf2c0c (Add Station V1.2)
               {!imageLoaded && !imageError && (
-                <div className="w-full h-48 flex flex-col items-center justify-center bg-transparent rounded-lg border-2 border-dashed border-gray-300">
+                <div className="w-full h-64 flex flex-col items-center justify-center bg-transparent rounded-lg border-2 border-dashed border-gray-300">
                   <div className="text-gray-400 text-center px-4">
                     <div className="text-sm font-medium mb-1">Loading Image</div>
                   </div>
                 </div>
               )}
               {imageError ? (
-                <div className="w-full h-48 flex flex-col items-center justify-center text-gray-400">
+                <div className="w-full h-64 flex flex-col items-center justify-center text-gray-400">
                   <ImageOff size={32} />
                   <p className="text-sm mt-2">Image not available</p>
                 </div>
@@ -141,18 +136,14 @@ export function FlashCard({
                 <img
                   src={question.imageUrl}
                   alt="Question"
-                  className={`${imageLoaded ? 'block' : 'hidden'} bg-transparent rounded-lg transition-opacity duration-200`}
+                  className={`${imageLoaded ? 'block' : 'hidden'} bg-transparent`}
                   style={getImageStyle()}
                   onLoad={handleImageLoad}
                   onError={handleImageError}
                 />
               )}
             </div>
-            {question.description && (
-              <p className="text-xl text-gray-600 italic text-center max-w-xl">
-                {question.description}
-              </p>
-            )}
+            <p className="text-3xl text-gray-600 italic text-center max-w-xl">{question.description}</p>
           </div>
         </div>
 
