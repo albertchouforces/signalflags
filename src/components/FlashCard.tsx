@@ -116,10 +116,14 @@ export function FlashCard({
           </div>
           <div className="flex flex-col items-center mb-4">
 <<<<<<< HEAD
+<<<<<<< HEAD
             <div className="w-full flex items-center justify-center mb-4 p-4 min-h-[200px]">
 =======
             <div className="w-full max-w-2xl rounded-lg flex items-center justify-center mb-4 p-4">
 >>>>>>> parent of bdf2c0c (Add Station V1.2)
+=======
+            <div className="w-full flex items-center justify-center mb-4 p-4 min-h-[200px]"> {/* add bg-gray-50 rounded-lg for grey background */}
+>>>>>>> parent of d5a5c69 (Update FlashCard.tsx)
               {!imageLoaded && !imageError && (
                 <div className="w-full h-64 flex flex-col items-center justify-center bg-transparent rounded-lg border-2 border-dashed border-gray-300">
                   <div className="text-gray-400 text-center px-4">
