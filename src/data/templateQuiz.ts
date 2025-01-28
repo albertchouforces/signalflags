@@ -146,7 +146,7 @@ export const templateQuestions: QuestionData[] = [
     question: "What does this represent?",
     correctAnswer: "Kilo",
     description: "Morse Code -.-",
-    fact: "The navy meaning is 'Spare no meaning'.",
+    fact: "The navy meaning is 'Personnel working aloft and/or over the side'.",
     imageUrl: "/images/Kilo.png"
   },
   {
@@ -218,7 +218,7 @@ export const templateQuestions: QuestionData[] = [
     question: "What does this represent?",
     correctAnswer: "Tango",
     description: "Morse Code -",
-    fact: "The navy meaning is 'Conducting Flag Hoist drill'.",
+    fact: "The navy meaning is 'Time indicator'.",
     imageUrl: "/images/Tango.png"
   },
   {
@@ -273,7 +273,7 @@ export const templateQuestions: QuestionData[] = [
     id: 27,
     question: "What does this represent?",
     correctAnswer: "One",
-    description: "",
+    description: "Morse Code .----",
     fact: "",
     imageUrl: "/images/One.png"
   },
@@ -281,7 +281,7 @@ export const templateQuestions: QuestionData[] = [
     id: 28,
     question: "What does this represent?",
     correctAnswer: "Two",
-    description: "",
+    description: "Morse Code ..---",
     fact: "",
     imageUrl: "/images/Two.png"
   },
@@ -289,7 +289,7 @@ export const templateQuestions: QuestionData[] = [
     id: 29,
     question: "What does this represent?",
     correctAnswer: "Three",
-    description: "",
+    description: "Morse Code ...--",
     fact: "",
     imageUrl: "/images/Three.png"
   },
@@ -297,7 +297,7 @@ export const templateQuestions: QuestionData[] = [
     id: 30,
     question: "What does this represent?",
     correctAnswer: "Four",
-    description: "",
+    description: "Morse Code ....-",
     fact: "",
     imageUrl: "/images/Four.png"
   },
@@ -305,7 +305,7 @@ export const templateQuestions: QuestionData[] = [
     id: 31,
     question: "What does this represent?",
     correctAnswer: "Five",
-    description: "",
+    description: "Morse Code .....",
     fact: "",
     imageUrl: "/images/Five.png"
   },
@@ -313,7 +313,7 @@ export const templateQuestions: QuestionData[] = [
     id: 32,
     question: "What does this represent?",
     correctAnswer: "Six",
-    description: "",
+    description: "Morse Code -....",
     fact: "",
     imageUrl: "/images/Six.png"
   },
@@ -321,7 +321,7 @@ export const templateQuestions: QuestionData[] = [
     id: 33,
     question: "What does this represent?",
     correctAnswer: "Seven",
-    description: "",
+    description: "Morse Code --...",
     fact: "",
     imageUrl: "/images/Seven.png"
   },
@@ -329,7 +329,7 @@ export const templateQuestions: QuestionData[] = [
     id: 34,
     question: "What does this represent?",
     correctAnswer: "Eight",
-    description: "",
+    description: "Morse Code ---..",
     fact: "",
     imageUrl: "/images/Eight.png"
   },
@@ -337,7 +337,7 @@ export const templateQuestions: QuestionData[] = [
     id: 35,
     question: "What does this represent?",
     correctAnswer: "Nine",
-    description: "",
+    description: "Morse Code ----.",
     fact: "",
     imageUrl: "/images/Nine.png"
   },
@@ -345,7 +345,7 @@ export const templateQuestions: QuestionData[] = [
     id: 36,
     question: "What does this represent?",
     correctAnswer: "Zero",
-    description: "",
+    description: "Morse Code -----",
     fact: "",
     imageUrl: "/images/Zero.png"
   },
@@ -460,10 +460,10 @@ export const secondQuizQuestions: QuestionData[] = [
   {
     id: 11,
     question: "What does this represent?",
-    correctAnswer: "Black",
+    correctAnswer: "Screen",
     description: "",
     fact: "",
-    imageUrl: "/images/Black.png"
+    imageUrl: "/images/Screen.png"
   },
   {
     id: 12,
