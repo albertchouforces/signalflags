@@ -124,7 +124,7 @@ export function FlashCard({
             <span className="text-sm text-gray-500">Question {questionNumber} of {totalQuestions}</span>
           </div>
           <div className="flex flex-col items-center mb-4">
-            <div className="w-full flex items-center justify-center mb-4 p-4 min-h-[200px]"> {/* add bg-gray-50 rounded-lg for grey background */}
+            <div className="w-full flex items-center justify-center mb-4 p-4 min-h-[200px]">
               {!imageLoaded && !imageError && (
                 <div className="w-full h-48 flex flex-col items-center justify-center bg-transparent rounded-lg border-2 border-dashed border-gray-300">
                   <div className="text-gray-400 text-center px-4">
